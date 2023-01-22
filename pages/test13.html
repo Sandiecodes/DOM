@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+      <title>Move Pic</title>
+      <script type = "text/javascript">
+	var x = 100;
+	var y = 100;
+	function down() 
+		{
+
+			var pic = document.getElementById("pic");
+			
+			y = y + 10;
+			pic.style.top = y + "px";
+
+		}  
+      </script>
+   </head>
+   <body>
+      <p> Move Pic</p> 
+	<img id="pic" src="smile.jpg"  width="10%" height="10%" style="position: absolute; left: 100px; top: 100px" />
+<button onclick="down()"> down </button>
+   </body>
+</html>

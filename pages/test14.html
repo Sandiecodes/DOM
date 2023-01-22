@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type = "text/javascript">
+var go = false;
+	function mousedown(oevent)
+	{
+
+		go = !go;
+			
+	}
+	function mousemove(oevent)
+	{
+		var textbox = document.getElementById("TEXTBOX1");
+
+		var data = "  " + oevent.clientX + " " + oevent.clientY;
+
+		textbox.value = data;
+		if(go)
+		{
+		var pic = document.getElementById("s");
+
+		pic.style.left = oevent.clientX + "px";
+		pic.style.top = oevent.clientY + "px";
+
+		}
+
+	}
+
+	</script>
+</head>
+<body onmousemove = "mousemove(event)" onmousedown = "mousedown(event)">
+<form >
+<p>
+	<img id="s" src="smile.jpg"  width="10%" height="10%" style="position: absolute; left: 100px; top: 100px" />
+</p>
+<p>
+	<textarea rows ="10" cols ="10" id="TEXTBOX1"> hello </textarea>
+</p>
+</form>
+</body>
+</html>
+
+ 

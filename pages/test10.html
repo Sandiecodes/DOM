@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+   <head> 
+
+	<meta charset="UTF-8">
+    <title>Demo 1</title>
+
+   </head>
+   <body>
+
+	<p id="p1">Hello world!</p>
+
+	<button onclick="ChangeText()"> Change text </button>
+	<button id="b2"> Change color </button>
+
+	<script type = "text/javascript">
+	  
+
+		function ChangeText()
+		{
+			document.getElementById("p1").innerHTML="New text!";
+		}
+	
+		function ChangeColor()
+		{
+			document.getElementById("p1").style.color = "blue";
+		}
+	
+		document.getElementById("b2").addEventListener("click", ChangeColor);
+		  </script>
+
+   
+	    </body>
+</html>

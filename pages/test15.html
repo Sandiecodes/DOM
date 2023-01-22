@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    
+
+
+
+
+<head>
+
+<script type = "text/javascript">
+
+
+	var z = 1;
+	var x = 1;
+	var y = 1;
+
+	function mover()
+	{
+
+		var pic = document.getElementById("s");
+
+		if(x > 100) { z = -1; }
+
+		if(x < 2) { z = 1; };
+
+		x = x + z;
+
+		y = y + z;
+
+ 
+		 
+		pic.style.left = x + "px";
+		pic.style.top = y + "px"; 
+		 
+		
+
+		setTimeout('mover()',3);
+
+	}
+
+
+
+	
+	mover();
+
+	
+
+	</script>
+
+
+</head>
+
+
+<body   onload="mover(event)">
+
+
+<form >
+<p>
+
+
+	<img id="s" src="smile.jpg"  width="10%" height="10%" style="position: absolute; left: 100px; top: 100px" />
+</p>
+
+
+ 
+</form>
+
+</body>
+
+</html>
